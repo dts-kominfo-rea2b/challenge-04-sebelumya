@@ -15,13 +15,16 @@ const createDate = (dates, num) => {
     const dateString = date.toString();
     array.push(dateString);
   }
-  const sortDate = array.sort((a, b) => a - b);
+
   if (num === undefined) {
+    const sortDate = array.sort((a, b) => a - b);
     return sortDate.join("-");
   } else {
-    return sortDate[num];
+    const sortDate = array.sort((a, b) => a + b);
+    return array[num];
   }
 };
+
 // ! JANGAN DIMODIFIKASI
 (() => {
   // IIFE
